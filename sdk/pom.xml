@@ -2,22 +2,22 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.finbourne</groupId>
-    <artifactId>CHANGEME-APPLICATION-LOWER-sdk-extensions</artifactId>
+    <artifactId>scheduler-sdk-extensions</artifactId>
     <packaging>jar</packaging>
-    <name>CHANGEME-APPLICATION-LOWER-sdk-extensions</name>
+    <name>scheduler-sdk-extensions</name>
     <version>0.1.0</version>
-    <url>https://github.com/finbourne/CHANGEME-APPLICATION-LOWER-sdk-extensions-java</url>
-    <description>FINBOURNE CHANGEME-APPLICATION-CAMEL SDK Extensions</description>
+    <url>https://github.com/finbourne/scheduler-sdk-extensions-java</url>
+    <description>FINBOURNE Scheduler SDK Extensions</description>
     <scm>
-        <connection>git@github.com:finbourne/CHANGEME-APPLICATION-LOWER-sdk-extensions-java.git</connection>
-        <developerConnection>git@github.com:finbourne/CHANGEME-APPLICATION-LOWER-sdk-extensions-java.git</developerConnection>
-        <url>https://github.com/finbourne/CHANGEME-APPLICATION-LOWER-sdk-extensions-java</url>
+        <connection>git@github.com:finbourne/scheduler-sdk-extensions-java.git</connection>
+        <developerConnection>git@github.com:finbourne/scheduler-sdk-extensions-java.git</developerConnection>
+        <url>https://github.com/finbourne/scheduler-sdk-extensions-java</url>
     </scm>
 
     <licenses>
         <license>
             <name>MIT</name>
-            <url>https://github.com/finbourne/CHANGEME-APPLICATION-LOWER-sdk-extensions-java/blob/master/LICENSE</url>
+            <url>https://github.com/finbourne/scheduler-sdk-extensions-java/blob/master/LICENSE</url>
             <distribution>repo</distribution>
         </license>
     </licenses>
@@ -260,11 +260,11 @@
             <version>3.0.2</version>
         </dependency>
 
-        <!-- CHANGEME-APPLICATION-CAMEL sdk -->
+        <!-- Scheduler sdk -->
         <dependency>
             <groupId>com.finbourne</groupId>
-            <artifactId>CHANGEME-APPLICATION-LOWER-sdk-preview</artifactId>
-            <version>${CHANGEME-APPLICATION-LOWER-sdk-version}</version>
+            <artifactId>scheduler-sdk-preview</artifactId>
+            <version>${scheduler-sdk-version}</version>
         </dependency>
 
         <!-- HTTP client: jersey-client -->
@@ -401,6 +401,6 @@
         <junit-version>4.13.1</junit-version>
         <hamcrest-version>1.3</hamcrest-version>
         <mockito-version>3.3.3</mockito-version>
-        <CHANGEME-APPLICATION-LOWER-sdk-version></CHANGEME-APPLICATION-LOWER-sdk-version>
+        <scheduler-sdk-version></scheduler-sdk-version>
     </properties>
 </project>

@@ -1,18 +1,18 @@
 # Introduction
 
-Welcome and thank you for considering contributing to CHANGEME-APPLICATION-LOWER-sdk-extensions-java.  We're delighted to have you as part of our community.
+Welcome and thank you for considering contributing to scheduler-sdk-extensions-java.  We're delighted to have you as part of our community.
 
 Following these guidelines will help us effectively manage the contribution process for eveyone involved in the contribution process. It communicates that you respect the time of the developers managing and developing this open source project. In return, we will reciprocate that respect by addressing your issue, assessing changes, and helping you finalize your pull requests.
 
 # Contributing
 
-We have open sourced CHANGEME-APPLICATION-LOWER-sdk-extensions-java to help make it easy for you to use LUSID and welcome contributions from our community. There are many ways to contribute, from writing code samples, improving the documentation, submitting bug reports and feature requests to writing code which can be incorporated into CHANGEME-APPLICATION-LOWER-sdk-extensions-java itself. This section guides you through submitting a contribution.
+We have open sourced scheduler-sdk-extensions-java to help make it easy for you to use LUSID and welcome contributions from our community. There are many ways to contribute, from writing code samples, improving the documentation, submitting bug reports and feature requests to writing code which can be incorporated into scheduler-sdk-extensions-java itself. This section guides you through submitting a contribution.
 
 ## Reporting bugs
 
 **If you find a security vulnerability, please do NOT open an issue. Any security issues should be submitted directly to soc@finbourne.com.**
 
-If you think you have found a bug, first make sure you are testing against the latest version of CHANGEME-APPLICATION-LOWER-sdk-extensions-java as your issue may have already been fixed. Also search all open and closed issues to see if your issue has already been answered.
+If you think you have found a bug, first make sure you are testing against the latest version of scheduler-sdk-extensions-java as your issue may have already been fixed. Also search all open and closed issues to see if your issue has already been answered.
 
 If you are unable to find your issue then please raise an issue using the provided template. Try to provide as much information as possible that will help us reproduce the problem, provide the ticket that _you_ would like to receive if you had to fix the issue.
 

@@ -2,9 +2,9 @@ version: "3"
 
 services:
 
-  CHANGEME-APPLICATION-LOWER-sdk-extensions-java-test:
+  scheduler-sdk-extensions-java-test:
     build: .
-    container_name: CHANGEME-APPLICATION-LOWER-sdk-extensions-java-test
+    container_name: scheduler-sdk-extensions-java-test
     image: maven:3.8.5-jdk-11
     environment:
       - FBN_TOKEN_URL
@@ -13,6 +13,6 @@ services:
       - FBN_CLIENT_ID
       - FBN_CLIENT_SECRET
       - FBN_APP_NAME
-      - FBN_CHANGEME-APPLICATION-UPPER_API_URL
+      - FBN_SCHEDULER_API_URL
     volumes:
       - .:/usr/src
