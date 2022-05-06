@@ -29,7 +29,7 @@ public class ApiConfigurationBuilderTests {
 
         ApiConfiguration apiConfiguration = apiConfigurationBuilder.build(DUMMY_CREDENTIALS_FILE);
 
-        assertThat(apiConfiguration.getApiUrl(), equalTo("https://some-non-existing-test-instance.lusid.com/scheduler"));
+        assertThat(apiConfiguration.getApiUrl(), equalTo("https://some-non-existing-test-instance.lusid.com/scheduler2"));
         assertThat(apiConfiguration.getTokenUrl(), equalTo("https://some-non-existing-test-instance.doesnotexist.com/oauth2/doesnotexist/v1/token"));
         assertThat(apiConfiguration.getClientId(), equalTo("client-id"));
         assertThat(apiConfiguration.getClientSecret(), equalTo("secret"));
@@ -45,7 +45,7 @@ public class ApiConfigurationBuilderTests {
 
         ApiConfiguration apiConfiguration = apiConfigurationBuilder.build("does_not_matter");
 
-        assertThat(apiConfiguration.getApiUrl(), equalTo("https://some-non-existing-test-instance.lusid.com/scheduler"));
+        assertThat(apiConfiguration.getApiUrl(), equalTo("https://some-non-existing-test-instance.lusid.com/scheduler2"));
         assertThat(apiConfiguration.getTokenUrl(), equalTo("https://some-non-existing-test-instance.doesnotexist.com/oauth2/doesnotexist/v1/token"));
         assertThat(apiConfiguration.getClientId(), equalTo("client-id-from-env"));
         assertThat(apiConfiguration.getClientSecret(), equalTo("secret-from-env"));
