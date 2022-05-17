@@ -45,14 +45,7 @@ public class ApiClientBuilderTest {
         apiClientBuilder.createDefaultApiClient(apiConfiguration, httpClient, finbourneToken);
         verify(apiClient).setHttpClient(httpClient);
     }
-
-    @Test
-    public void createApiClient_OnProxyAddress_ShouldNotSetAndOverrideDefaultHttpClient() throws FinbourneTokenException {
-        doReturn(null).when(apiConfiguration).getProxyAddress();
-        apiClientBuilder.createDefaultApiClient(apiConfiguration, httpClient, finbourneToken);
-        verify(apiClient, times(0)).setHttpClient(httpClient);
-    }
-
+    
     @Test
     public void createApiClient_OnNoApplicationName_ShouldNotSetApplicationHeader() throws FinbourneTokenException {
         doReturn(null).when(apiConfiguration).getApplicationName();
