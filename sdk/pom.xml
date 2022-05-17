@@ -5,7 +5,7 @@
     <artifactId>scheduler-sdk-extensions</artifactId>
     <packaging>jar</packaging>
     <name>scheduler-sdk-extensions</name>
-    <version>0.6.0-SNAPSHOT</version>
+    <version>0.7.0-SNAPSHOT</version>
     <url>https://github.com/finbourne/scheduler-sdk-extensions-java</url>
     <description>FINBOURNE Scheduler SDK Extensions</description>
     <scm>
@@ -401,6 +401,6 @@
         <junit-version>4.13.1</junit-version>
         <hamcrest-version>1.3</hamcrest-version>
         <mockito-version>3.3.3</mockito-version>
-        <scheduler-sdk-version>0.0.518-SNAPSHOT</scheduler-sdk-version>
+        <scheduler-sdk-version>0.0.520-SNAPSHOT</scheduler-sdk-version>
     </properties>
 </project>
