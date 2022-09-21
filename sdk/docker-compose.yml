@@ -13,6 +13,7 @@ services:
       - FBN_CLIENT_ID
       - FBN_CLIENT_SECRET
       - FBN_APP_NAME
-      - FBN_SCHEDULER_API_URL
+      - FBN_SCHEDULER_API_URL=${FBN_BASE_API_URL}/scheduler2
+      - FBN_ACCESS_TOKEN=${FBN_ACCESS_TOKEN}
     volumes:
       - .:/usr/src
