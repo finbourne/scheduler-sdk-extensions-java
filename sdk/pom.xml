@@ -401,6 +401,6 @@
         <junit-version>4.13.1</junit-version>
         <hamcrest-version>1.3</hamcrest-version>
         <mockito-version>3.3.3</mockito-version>
-        <scheduler-sdk-version>0.0.762-SNAPSHOT</scheduler-sdk-version>
+        <scheduler-sdk-version>0.0.763-SNAPSHOT</scheduler-sdk-version>
     </properties>
 </project>
