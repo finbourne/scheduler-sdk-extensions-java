@@ -37,6 +37,12 @@ public class ApiConfiguration {
     private String apiUrl;
 
     /**
+     * Personal Access Token
+     */
+    private String personalAccessToken;
+
+
+    /**
      * Proxy url (if required)
      */
     private String proxyAddress;
@@ -55,6 +61,23 @@ public class ApiConfiguration {
      * Proxy password (if required)
      */
     private String proxyPassword;
+
+
+    public ApiConfiguration(String tokenUrl, String username, String password, String clientId, String clientSecret, String apiUrl, String applicationName,
+                            String personalAccessToken, String proxyAddress, Integer proxyPort, String proxyUsername, String proxyPassword) {
+        this.tokenUrl = tokenUrl;
+        this.username = username;
+        this.password = password;
+        this.clientId = clientId;
+        this.clientSecret = clientSecret;
+        this.apiUrl = apiUrl;
+        this.applicationName = applicationName;
+        this.personalAccessToken = personalAccessToken;
+        this.proxyAddress = proxyAddress;
+        this.proxyPort = proxyPort;
+        this.proxyUsername = proxyUsername;
+        this.proxyPassword = proxyPassword;
+    }
 
     public ApiConfiguration(String tokenUrl, String username, String password, String clientId, String clientSecret, String apiUrl, String applicationName,
                             String proxyAddress, Integer proxyPort, String proxyUsername, String proxyPassword) {
@@ -159,5 +182,13 @@ public class ApiConfiguration {
 
     public void setProxyPort(Integer proxyPort) {
         this.proxyPort = proxyPort;
+    }
+
+    public String getPersonalAccessToken() {
+        return personalAccessToken;
+    }
+
+    public void setPersonalAccessToken(String personalAccessToken) {
+        this.personalAccessToken = personalAccessToken;
     }
 }

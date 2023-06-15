@@ -5,6 +5,8 @@ import com.finbourne.scheduler.extensions.auth.FinbourneTokenException;
 
 public class ApiFactoryBuilder {
 
+    private static final int DEFAULT_TIMEOUT_SECONDS = 10;
+
     /**
     * Build a {@link ApiFactory} defining configuration using environment variables. For details on the environment arguments see https://support.lusid.com/getting-started-with-apis-sdks.
     *
@@ -15,7 +17,7 @@ public class ApiFactoryBuilder {
             throw new ApiConfigurationException("Environment variables to configure API client have not been set. See " +
                     " see https://support.lusid.com/getting-started-with-apis-sdks for details.");
         }
-        return createApiFactory("", 10, 10);
+        return createApiFactory(null, 10, 10);
     }
 
     /**
@@ -36,11 +38,13 @@ public class ApiFactoryBuilder {
     }
 
     private static boolean areRequiredEnvironmentVariablesSet(){
-        return (System.getenv("FBN_TOKEN_URL") != null &&
+        return ((System.getenv("FBN_TOKEN_URL") != null &&
                 System.getenv("FBN_USERNAME") != null &&
                 System.getenv("FBN_PASSWORD") != null &&
                 System.getenv("FBN_CLIENT_ID") != null &&
                 System.getenv("FBN_CLIENT_SECRET") != null &&
-                System.getenv("FBN_SCHEDULER_API_URL") != null);
+                System.getenv("FBN_SCHEDULER_API_URL") != null) ||
+                (System.getenv("FBN_SCHEDULER_API_URL") != null &&
+                System.getenv("FBN_ACCESS_TOKEN") != null));
     }
 }

@@ -13,6 +13,8 @@ import java.util.concurrent.TimeUnit;
 */
 public class HttpClientFactory {
 
+    private static int DEFAULT_TIMEOUT_SECONDS = 10;
+
     /**
     *  Builds a {@link OkHttpClient} from a {@link ApiConfiguration} to make
     *  calls to the scheduler API.
@@ -21,7 +23,7 @@ public class HttpClientFactory {
     * @return an client for http calls to scheduler API
     */
     public OkHttpClient build(ApiConfiguration apiConfiguration) {
-        return this.build(apiConfiguration, 10, 10);
+        return this.build(apiConfiguration, DEFAULT_TIMEOUT_SECONDS, DEFAULT_TIMEOUT_SECONDS);
     }
 
     /**
@@ -34,6 +36,20 @@ public class HttpClientFactory {
      * @return n client for http calls to scheduler API
      */
     public OkHttpClient build(ApiConfiguration apiConfiguration, int readTimeout, int writeTimeout){
+        return this.build(apiConfiguration, readTimeout, writeTimeout, DEFAULT_TIMEOUT_SECONDS);
+    }
+
+    /**
+     * Builds a {@link OkHttpClient} from a {@link ApiConfiguration} to make
+     * calls to the scheduler API.
+     *
+     * @param apiConfiguration configuration to connect to scheduler API
+     * @param readTimeout read timeout in seconds
+     * @param writeTimeout write timeout in seconds
+     * @param connectTimeout write timeout in seconds
+     * @return n client for http calls to scheduler API
+     */
+    public OkHttpClient build(ApiConfiguration apiConfiguration, int readTimeout, int writeTimeout, int connectTimeout){
         final OkHttpClient httpClient;
 
         //  use a proxy if given
@@ -44,6 +60,7 @@ public class HttpClientFactory {
             httpClient = new OkHttpClient.Builder()
                 .readTimeout(readTimeout, TimeUnit.SECONDS)
                 .writeTimeout(writeTimeout, TimeUnit.SECONDS)
+                .connectTimeout(connectTimeout, TimeUnit.SECONDS)
                 .proxy(new Proxy(Proxy.Type.HTTP, proxy))
                 .proxyAuthenticator((route, response) -> {
                     String credential = Credentials.basic(apiConfiguration.getProxyUsername(), apiConfiguration.getProxyPassword());
