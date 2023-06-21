@@ -236,14 +236,6 @@
                 <enabled>true</enabled>
             </snapshots>
         </repository>
-        <repository>
-            <id>finbourne-nexus</id>
-            <name>finbourne-nexus</name>
-            <url>https://nexus.finbourne.com/repository/maven/</url>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
     </repositories>
 
     <dependencies>
