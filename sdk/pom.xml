@@ -5,7 +5,7 @@
     <artifactId>scheduler-sdk-extensions</artifactId>
     <packaging>jar</packaging>
     <name>scheduler-sdk-extensions</name>
-    <version>0.109.0-SNAPSHOT</version>
+    <version>0.110.0-SNAPSHOT</version>
     <url>https://github.com/finbourne/scheduler-sdk-extensions-java</url>
     <description>FINBOURNE Scheduler SDK Extensions</description>
     <scm>
